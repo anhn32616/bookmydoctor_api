@@ -11,6 +11,11 @@ const specialty = require('./specialty')
 
 
 const doctor = require('./doctor');
+const hospital = require('./hospital');
+const clinic = require('./clinic')
+const notification = require('./notification')
+
+
 
 
 
@@ -31,6 +36,12 @@ router.use('/specialty',specialty)
 
 
 router.use('/doctor',doctor)
+router.use('/hospital',hospital)
+router.use('/clinic', clinic)
+router.use('/notification',notification)
+
+
+
 
 
 module.exports = router;
