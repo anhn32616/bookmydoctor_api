@@ -189,6 +189,7 @@ let createDoctor = (data) => {
         }
     });
 }
+// update doctor
 let updateDoctor = (data) => {
     return new Promise(async (resolve, reject) => {
         try {

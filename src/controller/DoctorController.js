@@ -93,6 +93,7 @@ let createDoctor = async(req,res) => {
         }
     }
 }
+// update doctor
 let updateDoctor = async (req, res) => {
     let id = req.params.id;
     if(!id) {
