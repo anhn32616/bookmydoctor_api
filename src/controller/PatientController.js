@@ -96,13 +96,16 @@ let getPatientById = async (req,res) => {
    
 }
 
+// #Delete Patient
 let deletePatientById = async (req,res) => {
+
     let response= await patientService.deletePatientById(req.params);
     if(response.errCode == 2){
         return res.status(404).json(response)
     } else{
         return res.status(200).json(response)
     }
+    
 }
 
 let getIdPatientFromIdUser = async (req,res) =>{
