@@ -10,13 +10,13 @@ var server = require('../../index');
 chai.use(chaiHttp);
 describe('Todo API', function () {
 
-    // it('should add a todo on /api/auth/login GET', function (done) {
-    //     chai.request(server)
-    //         .get('/api/specialty')
-    //         .end(function (err, resonse) {
-    //             resonse.should.have.status(200);
-    //             done()
-    //         })
-    //     done();
-    // });
+    it('should add a todo on /api/auth/login GET', function (done) {
+        chai.request(server)
+            .get('/api/specialty')
+            .end(function (err, resonse) {
+                resonse.should.have.status(200);
+                done()
+            })
+        done();
+    });
 });

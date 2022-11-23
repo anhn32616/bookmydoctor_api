@@ -23,6 +23,8 @@ let addSpecialty = async (req,res) =>{
 
 }
 
+
+// Get List Specialties
 let getAllSpecialty = async (req,res)=>{
     let key;
     if( req.query.key === undefined){
