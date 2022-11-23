@@ -275,6 +275,7 @@ let getAppointmentById = (id, userId, role_name) => {
         }
     });
 }
+// accept Appointment
 let acceptAppointment = (id, userId) => {
     return new Promise(async (resolve, reject) => {
         let resData = {};

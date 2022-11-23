@@ -114,6 +114,7 @@ let getAppointmentForUserByUserId = async(req, res) => {
         appointment: resData.appointment,
     })
 }
+// accept Appointment
 let acceptAppointment = async(req, res) => {
     let id = req.params.id;
     if(!id) {
