@@ -115,6 +115,7 @@ let updateClinic = async(req, res) => {
     }
     return res.status(404).json({message: resData.errMessage});
 }
+// delete Clinic
 let deleteClinic = async(req, res) => {
     let id = req.params.id;
     if (!id){

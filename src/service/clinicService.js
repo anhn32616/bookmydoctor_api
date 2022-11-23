@@ -144,6 +144,7 @@ let updateClinic = (id, data) => {
         }
     })
 }
+// delete Clinic
 let deleteClinic = (id) => {
     return new Promise(async (resolve, reject) => {
         try {
