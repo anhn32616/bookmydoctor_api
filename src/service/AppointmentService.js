@@ -601,6 +601,7 @@ let ChangeStatusAppointmentToDone = () => {
         }
     });
 }
+// Delete Appointment Status New
 let DeleteAppointmentStatusNew = () => {
     return new Promise(async (resolve, reject) => {
         try {
