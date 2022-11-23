@@ -25,6 +25,7 @@ let getAllDoctor = async(req,res) => {
         doctor: resData.doctor,
     })
 }
+// get doctor by id
 let getDoctorById = async(req,res) => {
     let id = parseInt(req.params.id);
     if (id) {

@@ -70,6 +70,8 @@ let getAllDoctor = (key, page, limit) => {
     });
 }
 
+// get doctor by id
+
 let getDoctorById = (id) => {
     return new Promise(async (resolve, reject) => {
         try {
