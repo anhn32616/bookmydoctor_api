@@ -120,6 +120,7 @@ let searchClinic = (key) => {
         }
     })
 }
+// update Clinic
 let updateClinic = (id, data) => {
     return new Promise(async (resolve, reject) => {
         try {

@@ -92,6 +92,7 @@ let searchClinic = async (req, res) => {
     }
 
 }
+// update Clinic
 let updateClinic = async(req, res) => {
     let id = req.params.id;
     if(!id) {
