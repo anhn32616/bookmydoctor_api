@@ -52,6 +52,7 @@ let getDoctorById = async(req,res) => {
         })
     }
 }
+// create doctor
 let createDoctor = async(req,res) => {
     if (!req.body.email || !req.body.password || !req.body.firsname || !req.body.lastname 
         || !req.body.gender || !req.body.phoneNumber || !req.body.birthday || !req.body.address  

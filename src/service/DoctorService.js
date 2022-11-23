@@ -120,6 +120,7 @@ let getDoctorById = (id) => {
         }
     });
 }
+// create doctor
 let createDoctor = (data) => {
     return new Promise(async (resolve, reject) => {
         let doctorData = {};
