@@ -202,6 +202,7 @@ let getAllAppointments = (key, page, limit, status, date_string, rate) => {
         }
     });
 }
+// get Appointment By Id
 let getAppointmentById = (id, userId, role_name) => {
     return new Promise(async (resolve, reject) => {
         try {

@@ -51,6 +51,7 @@ let getAllAppointments = async(req, res) => {
     })
     
 }
+// get Appointment By Id
 let getAppointmentById = async(req, res) => {
     let id = req.params.id;
     if(!id) {
