@@ -9,20 +9,20 @@ var server = require('../../index');
 // use chaiHttp for making the actual HTTP requests   
 chai.use(chaiHttp);
 describe('Todo API', function () {
-    beforeEach(function (done) {
-    });
+    // beforeEach(function (done) {
+    // });
 
-    afterEach(function (done) {
-        Todo.collection.drop().then(function () {
+    // afterEach(function (done) {
+    //     Todo.collection.drop().then(function () {
 
-            // success     
-        }).catch(function () {
+    //         // success     
+    //     }).catch(function () {
 
-            // error handling
-            console.warn(' collection may not exists!');
-        })
-        done();
-    });
+    //         // error handling
+    //         console.warn(' collection may not exists!');
+    //     })
+    //     done();
+    // });
 
     it('should add a todo on /api/auth/login POST', function (done) {
         chai.request(server)
