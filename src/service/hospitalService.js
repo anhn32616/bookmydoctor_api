@@ -25,6 +25,7 @@ let createHospital = (data) => {
         }
     })
 }
+// get all hospital
 let getAllHospital = (key, page, limit) => {
     return new Promise(async (resolve, reject) => {
         try {

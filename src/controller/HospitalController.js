@@ -28,6 +28,7 @@ let createHospital = async(req, res) => {
         })
     }
 }
+// get all hospital
 let getAllHospital = async(req, res) => {
     let key = req.query.key === undefined ? '' : req.query.key;
     let pageNumber = req.query.page === undefined ? 0: req.query.page;
