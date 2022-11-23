@@ -140,6 +140,7 @@ let updateHospital = (id, data) => {
         }
     })
 }
+// delete hospital
 let deleteHospital = (id) => {
     return new Promise(async(resolve, reject) => {
         try {
