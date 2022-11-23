@@ -14,10 +14,10 @@ describe('Todo API', function () {
         chai.request(server)
             .post('/api/auth/login')
             .send({
-                'email': 'anh9@gmai.com',
-                'password': '123'
+                'email': 'admin@gmail.com',
+                'password': '12345678'
             })
-            .end(function (err, res) {
+            .end( function (err, res) {
 
                 // the res object should have a status of 201
                 res.should.have.status(200);
@@ -33,7 +33,7 @@ describe('Todo API', function () {
                         resonse.should.have.status(200);
                         done()
                     })
-                done();
+                // done();
             });
     });
 });

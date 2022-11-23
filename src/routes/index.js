@@ -4,7 +4,7 @@ const router=express.Router()
 const auth = require('./auth')
 const patient = require('./patient')
 const specialty = require('./specialty')
-
+const schedule = require('./schedule')
 
 
 
@@ -27,7 +27,7 @@ router.get("/status",(req,res)=>{
 router.use('/auth',auth)
 router.use('/patients',patient)
 router.use('/specialty',specialty)
-
+router.use('/schedule',schedule)
 
 
 
