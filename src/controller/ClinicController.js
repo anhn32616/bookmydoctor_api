@@ -27,6 +27,7 @@ let createClinic = async(req, res) => {
         })
     }
 }
+// get All Clinic
 let getAllClinic = async(req, res) => {
     let key = req.query.key === undefined ? '' : req.query.key;
     let pageNumber = req.query.page === undefined ? 0: req.query.page;

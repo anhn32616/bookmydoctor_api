@@ -22,6 +22,7 @@ let createClinic = (data) => {
         }
     })
 }
+// get All Clinic
 let getAllClinic = (key, page, limit) => {
     return new Promise(async (resolve, reject) => {
         try {
