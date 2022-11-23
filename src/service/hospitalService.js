@@ -55,7 +55,7 @@ let getAllHospital = (key, page, limit) => {
         }
     });
 }
-
+// get hospital by id
 let getHospitalById = (id) => {
     return new Promise(async (resolve, reject) => {
         try {

@@ -47,6 +47,7 @@ let getAllHospital = async(req, res) => {
         hospital: resData.hospital,
     })
 }
+// get hospital by id
 let getHospitalById = async(req,res) => {
     let id = parseInt(req.params.id);
     if (id) {
