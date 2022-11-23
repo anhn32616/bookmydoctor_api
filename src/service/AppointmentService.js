@@ -439,6 +439,7 @@ let acceptAppointment = (id, userId) => {
         }
     });
 }
+// get Appointment For User By User Id
 let getAppointmentForUserByUserId = (id, key, page, limit, status, day, date_string, rate) => {
     return new Promise(async (resolve, reject) => {
         try {

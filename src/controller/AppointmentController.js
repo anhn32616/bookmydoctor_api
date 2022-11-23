@@ -78,6 +78,7 @@ let getAppointmentById = async(req, res) => {
     }
 
 }
+// get Appointment For User By User Id
 let getAppointmentForUserByUserId = async(req, res) => {
     let id = req.params.id;
     if(!id) {
