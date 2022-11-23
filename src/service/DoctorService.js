@@ -194,28 +194,28 @@ let updateDoctor = (data) => {
     return new Promise(async (resolve, reject) => {
         try {
             let doctorData = {};
-            let data1 = {};
-            data1.id = data.specialty_id;
+            // let data1 = {};
+            // data1.id = data.specialty_id;
 
-            let specialtyData = await specialtyService.getSpecialtyById(data1);
+            // let specialtyData = await specialtyService.getSpecialtyById(data1);
 
-            if(specialtyData.errCode !== 0) {
-                doctorData.errCode = 404;
-                doctorData.errMessage = "Không tồn tại chuyên khoa có id này";
-                resolve(doctorData);
-            }
-            let hospital = await hospitalService.getHospitalById(data.hospital_id);
-            if(!hospital) {
-                doctorData.errCode = 404;
-                doctorData.errMessage = "Không tồn tại bệnh viện có id này";
-                resolve(doctorData);
-            }
-            let clinic = await clinicService.getClinicById(data.clinic_id);
-            if(!clinic) {
-                doctorData.errCode = 404;
-                doctorData.errMessage = "Không tồn tại phòng khám có id này";
-                resolve(doctorData);
-            }
+            // if(specialtyData.errCode !== 0) {
+            //     doctorData.errCode = 404;
+            //     doctorData.errMessage = "Không tồn tại chuyên khoa có id này";
+            //     resolve(doctorData);
+            // }
+            // let hospital = await hospitalService.getHospitalById(data.hospital_id);
+            // if(!hospital) {
+            //     doctorData.errCode = 404;
+            //     doctorData.errMessage = "Không tồn tại bệnh viện có id này";
+            //     resolve(doctorData);
+            // }
+            // let clinic = await clinicService.getClinicById(data.clinic_id);
+            // if(!clinic) {
+            //     doctorData.errCode = 404;
+            //     doctorData.errMessage = "Không tồn tại phòng khám có id này";
+            //     resolve(doctorData);
+            // }
             let doctor = await db.Doctor.findByPk(data.id);
             if (doctor) {
                 let param = {};
