@@ -11,6 +11,7 @@ const specialty = require('./specialty')
 
 
 const doctor = require('./doctor');
+const hospital = require('./hospital');
 
 
 
@@ -31,6 +32,8 @@ router.use('/specialty',specialty)
 
 
 router.use('/doctor',doctor)
+router.use('/hospital',hospital)
+
 
 
 module.exports = router;
