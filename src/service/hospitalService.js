@@ -99,6 +99,7 @@ let getHospitalById = (id) => {
         }
     });
 }
+// search hospital
 let searchHospital = (key) => {
     return new Promise(async(resolve, reject) => {
         try {

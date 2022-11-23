@@ -74,6 +74,7 @@ let getHospitalById = async(req,res) => {
         })
     }
 }
+// search hospital
 let searchHospital = async (req, res) => {
     let key = req.query.key === undefined ? '' : req.query.key;
     let hospital = await hospitalService.searchHospital(key);
