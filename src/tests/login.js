@@ -29,7 +29,7 @@ describe('Todo API', function () {
             .post('/api/auth/login')
             .send({
                 'email': 'anh9@gmai.com',
-                'password': '123'
+                'password': '123456'
             })
             .end(function (err, res) {
 
