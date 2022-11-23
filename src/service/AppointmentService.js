@@ -87,6 +87,7 @@ let createAppointment = (data) => {
 
     });
 }
+// get All Appointments
 let getAllAppointments = (key, page, limit, status, date_string, rate) => {
     return new Promise(async (resolve, reject) => {
         try {

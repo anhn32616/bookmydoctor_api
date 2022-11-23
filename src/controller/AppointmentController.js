@@ -23,6 +23,7 @@ let createAppointment = async(req, res) => {
         res.status(400).json(resData);
     }
 }
+// get All Appointments
 let getAllAppointments = async(req, res) => {
     let key;
     if( req.query.key === undefined){
