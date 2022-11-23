@@ -93,6 +93,7 @@ let searchHospital = async (req, res) => {
     }
 
 }
+// update hospital
 let updateHospital = async(req, res) => {
     let id = req.params.id;
     if(!id) {

@@ -116,6 +116,7 @@ let searchHospital = (key) => {
         }
     })
 }
+// update hospital
 let updateHospital = (id, data) => {
     return new Promise(async(resolve, reject) => {
         try {
