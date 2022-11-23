@@ -225,6 +225,7 @@ let ReportAppointment = async(req, res) => {
         })
     }
 }
+// Admin Handles Appointment
 let AdminHandlesAppointment = async(req, res) => {
     let id = req.params.id;
     if(!id) {

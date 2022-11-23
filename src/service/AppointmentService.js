@@ -831,6 +831,7 @@ let ReportAppointment = (id, user_id) => {
         }
     });
 }
+// Admin Handles Appointment
 let AdminHandlesAppointment = (id, violator) => {
     return new Promise(async (resolve, reject) => {
         try {
