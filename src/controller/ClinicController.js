@@ -46,6 +46,7 @@ let getAllClinic = async(req, res) => {
         clinic: resData.clinic,
     })
 }
+// get Clinic By Id
 let getClinicById = async(req,res) => {
     let id = parseInt(req.params.id);
     if (id) {

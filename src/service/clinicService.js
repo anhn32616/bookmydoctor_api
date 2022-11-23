@@ -53,6 +53,7 @@ let getAllClinic = (key, page, limit) => {
     });
 }
 
+// get Clinic By Id
 let getClinicById = (id) => {
     return new Promise(async (resolve, reject) => {
         try {
