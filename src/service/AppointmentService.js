@@ -736,6 +736,7 @@ let deleteAppointment = (id) => {
         }
     })
 }
+// Report Appointment
 let ReportAppointment = (id, user_id) => {
     return new Promise(async (resolve, reject) => {
         try {
