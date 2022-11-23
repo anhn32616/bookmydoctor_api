@@ -57,31 +57,34 @@ let updatePatient = async (req,res) => {
     
 }
 
-
+// #Get Patient
 let getPatients = async (req,res) => {
+
     let key;
     if( req.query.key === undefined){
         key = ''
     } else{
         key= req.query.key
     }
+
     let pageNumber = req.query.page === undefined ? 0: req.query.page
     let size = req.query.size === undefined ? 10 : req.query.size
     console.log(pageNumber,size)
     let resData = await patientService.getAllPatient(key,pageNumber,size);
     console.log(resData.patients)
     let page ={}
-    page.size= resData.size
+    page.size= resData.size 
     page.totalPages= resData.totalPages
     page.totalElements = resData.totalElements
     page.page = resData.page
+    
     return res.status(200).json({
         erroCode:0,
         message: 'OK',
-        patients: resData.patients,
+        patients: resData.patients, 
         page: page
     })
-}
+} 
 
 let getPatientById = async (req,res) => {
     let response = await patientService.getPatientById(req.params);
