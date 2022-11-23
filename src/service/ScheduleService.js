@@ -304,7 +304,7 @@ let getScheduleById = async (data) => {
         }
     })
 }
-
+//handle delete schedule
 let deleteSchedule = async (data) =>{
     return new Promise(async(resolve,reject)=>{
         try {
