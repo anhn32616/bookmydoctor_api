@@ -150,6 +150,7 @@ let acceptAppointment = async(req, res) => {
         })
     }
 }
+// CanCel Appointment
 let CanCelAppointment = async(req, res) => {
     let id = req.params.id;
     if(!id) {

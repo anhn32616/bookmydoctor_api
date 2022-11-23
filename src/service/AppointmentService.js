@@ -656,6 +656,7 @@ let DeleteAppointmentStatusNew = () => {
         }
     });
 }
+// CanCel Appointment
 let CanCelAppointment = (id, userId) => {
     return new Promise(async (resolve, reject) => {
         let resData = {};
