@@ -27,8 +27,9 @@ let addPatient = async (req,res) => {
     }
 }
 
-let updatePatient = async (req,res) => {
-    if(!req.params) {
+// Update Patient
+let updatePatient = async (req,res) => { 
+    if(!req.params) { 
         return res.status(200).json({
             errCode: "1",
             errMessage: "Thieu tham so id"
@@ -55,6 +56,7 @@ let updatePatient = async (req,res) => {
     }
     
 }
+
 
 let getPatients = async (req,res) => {
     let key;

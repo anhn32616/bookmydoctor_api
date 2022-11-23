@@ -144,7 +144,7 @@ let deletePatientById = async (data) =>{
         }
     })
 }
-
+// Update Patient
 let updatePatient = (param,data) =>{
     return new Promise(async(resolve, reject) => {
         let resData = {};
