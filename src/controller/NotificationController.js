@@ -16,6 +16,7 @@ let ChangeStatusNotifications = async(req, res) => {
         return res.status(200).json({message: resData.message});
     }
 }
+GetNotificationForUserByUserId
 let GetNotificationForUserByUserId = async(req, res) => {
     let id = req.params.id;
     if(!id) {

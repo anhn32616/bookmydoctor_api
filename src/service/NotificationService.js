@@ -1,5 +1,6 @@
 const db = require('../models');
 const { Op, where } = require('sequelize');
+// Create Notification
 let CreateNotification = (appointmentId, user_id, message) => {
     return new Promise(async (resolve, reject) => {
         try {
