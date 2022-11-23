@@ -254,6 +254,7 @@ let updateDoctor = (data) => {
         }
     });
 }
+// delete doctor
 let deleteDoctor = (id) => {
     return new Promise(async (resolve, reject) => {
         try {

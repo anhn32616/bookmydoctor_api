@@ -136,7 +136,7 @@ let updateDoctor = async (req, res) => {
         }
     }
 }
-
+// delete doctor
 let deleteDoctor = async(req, res) => {
     let id = req.params.id;
     if(!id){
