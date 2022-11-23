@@ -3,7 +3,7 @@ const bodyParser = require('body-parser')
 const connectDB = require('./src/config/connectDB');
 const app = express()
 const http = require('http');
-const server = http.createServer(app);
+// const server = http.createServer(app);
 // const SocketServer = require('./socketServer')
 
 
@@ -37,7 +37,10 @@ connectDB()
 
 // ---------------------//
 
-app.listen(port, async () => {
+let server = app.listen(port, async () => {
   console.log(`Example app listening on port ${port}`)
 })
+
+module.exports = server
+
 

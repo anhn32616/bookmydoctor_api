@@ -8,6 +8,41 @@ const path = require('path')
 
 dotenv.config();
 
+let handleLogin = async (req,res) => {
+    const {email,password} = req.body;
+    if(!email || !password) {
+        return res.status(400).json({
+            errCode: 1,
+            message: 'Nhập thiếu email hoặc mật khẩu'
+
+        })
+    }
+    let userData = await AuthService.handleUserLogin(email,password);
+    let accessToken = {};
+
+    // Kiem tra tim duoc user va acc user chua bi khoa
+    if (userData.errCode === 0 && userData.user.status == 1){
+        const data = {
+            email: userData.user.email,
+            id: userData.user.id,
+            role_name: userData.user.role.name
+        }
+        accessToken = jwt.sign(data, process.env.ACCESS_TOKEN_SECRET, {expiresIn: '1d'});
+        return res.status(200).json(
+            {
+                errCode: userData.errCode,
+                message: userData.errMessage,
+                token: accessToken,
+                user: userData.user
+            }
+        )
+    }
+    return res.status(403).json({
+        errCode: userData.errCode,
+        message: userData.errMessage,
+    });
+
+};
 
 
 let singup = async (req,res)=>{
@@ -76,4 +111,5 @@ module.exports = {
     singup:singup,
     verifyUser:verifyUser,
     upload: upload,
+    handleLogin: handleLogin,
 }
