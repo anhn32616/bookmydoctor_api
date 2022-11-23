@@ -1,9 +1,9 @@
 const db = require('../models/index');
 const userService = require('./UserService');
 const { Op, where } = require('sequelize');
-const specialtyService = require('./SpecialtyService');
-const hospitalService = require('./hospitalService');
-const clinicService = require('./clinicService');
+// const specialtyService = require('./SpecialtyService');
+// const hospitalService = require('./hospitalService');
+// const clinicService = require('./clinicService');
 const { QueryTypes } = require('sequelize');
 
 // get all doctor
@@ -128,25 +128,25 @@ let createDoctor = (data) => {
             let data1 = {};
             data1.id = data.specialty_id;
 
-            let specialtyData = await specialtyService.getSpecialtyById(data1);
+            // let specialtyData = await specialtyService.getSpecialtyById(data1);
 
-            if(specialtyData.errCode !== 0) {
-                doctorData.errCode = 404;
-                doctorData.errMessage = "Không tồn tại chuyên khoa có id này";
-                resolve(doctorData);
-            }
-            let hospital = await hospitalService.getHospitalById(data.hospital_id);
-            if(!hospital) {
-                doctorData.errCode = 404;
-                doctorData.errMessage = "Không tồn tại bệnh viện có id này";
-                resolve(doctorData);
-            }
-            let clinic = await clinicService.getClinicById(data.clinic_id);
-            if(!clinic) {
-                doctorData.errCode = 404;
-                doctorData.errMessage = "Không tồn tại phòng khám có id này";
-                resolve(doctorData);
-            }
+            // if(specialtyData.errCode !== 0) {
+            //     doctorData.errCode = 404;
+            //     doctorData.errMessage = "Không tồn tại chuyên khoa có id này";
+            //     resolve(doctorData);
+            // }
+            // let hospital = await hospitalService.getHospitalById(data.hospital_id);
+            // if(!hospital) {
+            //     doctorData.errCode = 404;
+            //     doctorData.errMessage = "Không tồn tại bệnh viện có id này";
+            //     resolve(doctorData);
+            // }
+            // let clinic = await clinicService.getClinicById(data.clinic_id);
+            // if(!clinic) {
+            //     doctorData.errCode = 404;
+            //     doctorData.errMessage = "Không tồn tại phòng khám có id này";
+            //     resolve(doctorData);
+            // }
             let userData = await userService.AdminCreateUser(data, "ROLE_DOCTOR");
             if (userData.errCode === 0) {
                 const doctor = await db.Doctor.create(
@@ -227,7 +227,6 @@ let updateDoctor = (data) => {
                 doctor.hospital_id = data.hospital_id;
                 doctor.clinic_id = data.clinic_id;
                 doctor.specialty_id = data.specialty_id;
-                doctor.rate = data.rate;
                 await doctor.save();
                 let doctorEdit = await db.Doctor.findByPk(data.id,
                     {
