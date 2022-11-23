@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"successful test\""
+    "start": "node index.js",
+    "test": "echo \"successful test\"",
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
