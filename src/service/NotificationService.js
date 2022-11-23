@@ -16,6 +16,7 @@ let CreateNotification = (appointmentId, user_id, message) => {
         }
     });
 }
+// Get Notification For User By UserId
 let GetNotificationForUserByUserId = (id) => {
     return new Promise(async (resolve, reject) => {
         try {
