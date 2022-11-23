@@ -715,6 +715,7 @@ let CanCelAppointment = (id, userId) => {
         }
     });
 }
+// delete Appointment
 let deleteAppointment = (id) => {
     return new Promise(async (resolve, reject) => {
         try {

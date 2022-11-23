@@ -180,6 +180,7 @@ let CanCelAppointment = async(req, res) => {
         })
     }
 }
+// delete Appointment
 let deleteAppointment = async(req, res) => {
     let id = req.params.id;
     if(!id) {
