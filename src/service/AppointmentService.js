@@ -935,6 +935,7 @@ let AdminHandlesAppointment = (id, violator) => {
         }
     });
 }
+// Patient Rating Appointment
 let PatientRatingAppointment = (userIdPatient, appointmentId, scores) => {
     return new Promise(async (resolve, reject) => {
         try {

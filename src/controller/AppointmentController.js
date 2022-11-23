@@ -249,6 +249,7 @@ let AdminHandlesAppointment = async(req, res) => {
         })
     }
 }
+// Patient Rating Appointment
 let PatientRatingAppointment = async(req, res) => {
     let id = req.params.id;
     if(!id) {
