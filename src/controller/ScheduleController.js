@@ -50,12 +50,12 @@ let getListScheduleOfDoctor = async (req,res) =>{
         page: page
     })
 }
-
-let updateSchedule = async (req,res) => {
-    if (!req.body.begin || !req.body.end || !req.body.cost) {
+//update schedule
+let updateSchedule = async (req,res) => {  
+    if (!req.body.begin || !req.body.end || !req.body.cost) { 
         return res.status(400).json({
-            erroCode:1,
-            message:'nhap day du thong tin'
+            erroCode:1, 
+            message:'nhap day du thong tin' 
         })
     }
     let resData = await scheduleService.updateSchedule(req.body,req.params)
@@ -65,7 +65,7 @@ let updateSchedule = async (req,res) => {
         return res.status(409).json(resData)
     } else {
         return res.status(200).json(resData)
-    }
+    } 
 }
 
 let getScheduleBuId = async (req,res) => {

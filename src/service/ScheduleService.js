@@ -214,7 +214,7 @@ let getScheduleOfDoctor = async (params,data,pageNumber, size) => {
     })
 }
 
-let updateSchedule = async (data,param) =>{
+let updateSchedule = async (data,param) =>{ 
     return new Promise(async(resolve, reject) => {
         try {
 
