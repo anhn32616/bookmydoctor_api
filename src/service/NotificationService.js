@@ -38,6 +38,7 @@ let GetNotificationForUserByUserId = (id) => {
         }
     })
 }
+// delete Notification Of User LastWeek
 let deleteNotificationOfUserLastWeek = (userId) => {
     return new Promise(async (resolve, reject) => {
         try {
