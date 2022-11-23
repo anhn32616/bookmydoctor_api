@@ -572,6 +572,7 @@ let getAppointmentForUserByUserId = (id, key, page, limit, status, day, date_str
         }
     })
 }
+// Change Status Appointment To Done
 let ChangeStatusAppointmentToDone = () => {
     return new Promise(async (resolve, reject) => {
         try {
