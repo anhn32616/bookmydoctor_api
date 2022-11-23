@@ -101,7 +101,7 @@ let checkbetwwen = (begin,end,date) =>{
     }
     return false;
 }
-
+//get list schedules
 let getListSchedule = async (data,pageNumber, size) => {
     return new Promise(async(resolve, reject) => {
         try {

@@ -33,7 +33,7 @@ let getListSchedule = async (req,res) => {
         page: page
     })
 }
-
+     
 let getListScheduleOfDoctor = async (req,res) =>{
     let pageNumber = req.query.page === undefined ? 0: req.query.page
     let size = req.query.size === undefined ? 10 : req.query.size
