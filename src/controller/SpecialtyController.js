@@ -40,7 +40,7 @@ let deleteSpecialty = async (req,res) => {
     let resData = await specialtyService.deleteSpecialty(req.params)
     return res.status(200).json(resData)
 }
-
+// UPdate Specialty
 let updateSpecialty = async (req,res) => {
     if(!req.params) {
         return res.status(200).json({
@@ -55,6 +55,7 @@ let updateSpecialty = async (req,res) => {
         req.body.image=req.file.path;
     }
 
+    
     let resData = await specialtyService.updateSpecialty(req.params,req.body)
     if(resData.errCode == 2){
         return res.status(404).json({
@@ -68,6 +69,7 @@ let updateSpecialty = async (req,res) => {
         })
     }
 }
+
 
 let getSpecialtyById = async (req,res) =>{
     let response = await specialtyService.getSpecialtyById(req.params);

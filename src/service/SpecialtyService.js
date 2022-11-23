@@ -72,6 +72,7 @@ let deleteSpecialty = (data) =>{
 }
 
 let updateSpecialty = (param,data) => {
+
     return new Promise(async(resolve, reject) => {
         let resData = {};
         try{
@@ -100,6 +101,7 @@ let updateSpecialty = (param,data) => {
             reject(e);
         }
     });
+    
 }
 
 let getSpecialtyById = async (data) => {
