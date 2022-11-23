@@ -73,6 +73,7 @@ let getClinicById = async(req,res) => {
         })
     }
 }
+// search Clinic
 let searchClinic = async (req, res) => {
     let key = req.query.key === undefined ? '' : req.query.key;
     let clinic = await clinicService.searchClinic(key);

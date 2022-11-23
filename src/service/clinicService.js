@@ -103,6 +103,7 @@ let getClinicById = (id) => {
         }
     });
 }
+// search Clinic
 let searchClinic = (key) => {
     return new Promise(async (resolve, reject) => {
         try {
