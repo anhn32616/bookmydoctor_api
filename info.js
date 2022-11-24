@@ -1,5 +1,10 @@
 var client = require('./connection.js');
 
-client.cluster.health({},function(err,resp,status) {  
-  console.log("-- Client Health --",resp);
-});
+const InfoElasticsearch = async() =>{
+    response = await client.cluster.health({
+        wait_for_status: 'yellow',
+        timeout: '50s'
+    })
+    console.log(response);
+}
+InfoElasticsearch();
