@@ -2,7 +2,7 @@
 const { Client } = require('@elastic/elasticsearch')
 const client = new Client({
   cloud: {
-    id: 'My_deployment:f2f30970fab7491880aed0bd3ed3346e',
+    id: 'My_deployment:dXMtY2VudHJhbDEuZ2NwLmNsb3VkLmVzLmlvJGYyZjMwOTcwZmFiNzQ5MTg4MGFlZDBiZDNlZDMzNDZlJDc3OTc4MWVmMDllMDQ2NjBhM2ExNTM3ZTE5NmYxZjg1',
   },
   auth: {
     username: 'elastic',
