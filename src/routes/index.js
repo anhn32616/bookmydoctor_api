@@ -15,6 +15,8 @@ const hospital = require('./hospital');
 const clinic = require('./clinic')
 const notification = require('./notification')
 const appointment = require('./appointment');
+const paymentMomo = require('./paymentMomo');
+const payment = require('./payment');
 
 
 
@@ -44,6 +46,8 @@ router.use('/hospital',hospital)
 router.use('/clinic', clinic)
 router.use('/notification',notification)
 router.use('/appointment', appointment)
+router.use('/payment-momo', paymentMomo)
+router.use('/payment', payment)
 
 
 
