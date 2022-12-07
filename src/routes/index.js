@@ -5,8 +5,8 @@ const auth = require('./auth')
 const patient = require('./patient')
 const specialty = require('./specialty')
 const schedule = require('./schedule')
-
-
+const messagechat = require('./mesagechat')
+const user = require('./user')
 
 
 
@@ -30,7 +30,8 @@ router.use('/auth',auth)
 router.use('/patients',patient)
 router.use('/specialty',specialty)
 router.use('/schedule',schedule)
-
+router.use('/messagechat',messagechat)
+router.use('/users',user)
 
 
 
