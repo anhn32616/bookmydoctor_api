@@ -251,6 +251,7 @@ let getPaymentById = (id, userId, role_name) => {
         }
     })
 }
+// get Payment Of Doctor
 let getPaymentOfDoctor = (doctorId, page, limit, begin, end) => {
     return new Promise(async (resolve, reject) => {
         try {

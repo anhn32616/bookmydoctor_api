@@ -53,6 +53,7 @@ let getPaymentById = async (req, res) => {
         return res.status(404).json({message: resData.message});
     }
 }
+// get Payment Of Doctor
 let getPaymentOfDoctor = async (req, res) => {
     let doctorId = req.params.id;
     if(!doctorId) {
