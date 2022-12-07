@@ -60,6 +60,7 @@ let doctorPayment = (id) => {
         }
     })
 }
+// create Payment
 let createPayment = (data) => {
     return new Promise(async (resolve, reject) => {
         try {
@@ -111,6 +112,7 @@ let createPayment = (data) => {
         }
     })
 }
+// get All Payment
 let getAllPayment = (key, page, limit, begin, end) => {
     return new Promise(async (resolve, reject) => {
         try {
