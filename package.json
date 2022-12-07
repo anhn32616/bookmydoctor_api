@@ -20,6 +20,7 @@
   "homepage": "https://github.com/anhn32616/bookmydoctor_api#readme",
   "dependencies": {
     "@elastic/elasticsearch": "^8.5.0",
+    "@sentry/node": "^4.4.0",
     "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",
     "chai": "^4.3.7",
