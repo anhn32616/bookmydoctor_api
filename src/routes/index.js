@@ -7,7 +7,7 @@ const specialty = require('./specialty')
 const schedule = require('./schedule')
 const messagechat = require('./mesagechat')
 const user = require('./user')
-
+const revenue = require('./revenue')
 
 
 const doctor = require('./doctor');
@@ -35,7 +35,7 @@ router.use('/specialty',specialty)
 router.use('/schedule',schedule)
 router.use('/messagechat',messagechat)
 router.use('/users',user)
-
+router.use('/revenue', revenue)
 
 
 
