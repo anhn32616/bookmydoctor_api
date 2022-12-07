@@ -58,6 +58,7 @@ let deleteNotificationOfUserLastWeek = (userId) => {
         }
     })
 }
+// Change Status Notifications
 let ChangeStatusNotifications = (id, userID) => {
     return new Promise(async (resolve, reject) => {
         try {
