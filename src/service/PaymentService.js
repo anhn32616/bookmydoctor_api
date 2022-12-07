@@ -177,6 +177,7 @@ let getAllPayment = (key, page, limit, begin, end) => {
     })
 
 }
+// get Payment By Id
 let getPaymentById = (id, userId, role_name) => {
     return new Promise(async (resolve, reject) => {
         try {

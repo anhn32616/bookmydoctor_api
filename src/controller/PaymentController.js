@@ -33,6 +33,7 @@ let doctorPayment = async(req, res) => {
     if (resData.errCode === 0) return res.status(200).json({message: resData.message});
     if (resData.errCode === 1) return res.status(404).json({message: resData.message});
 }
+// get Payment By Id
 let getPaymentById = async (req, res) => {
     let id = req.params.id;
     if(!id) {
