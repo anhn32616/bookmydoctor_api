@@ -1,6 +1,7 @@
 
 const momoPaymentService = require('../service/MomoPaymentService');
 const paymentService = require('../service/PaymentService');
+const paymomo = require('pay-momo');
 
 let Payment = async(req, res) => {
     let doctorId = req.body.doctor_id;
@@ -13,7 +14,7 @@ let Payment = async(req, res) => {
     if (resData.errCode === 1) return res.status(404).json({message: resData.message});
     if (resData.errCode === 0) {
         if (resData.message.totalPayment === 0) return res.status(400).json({ message: 'Số tiền thanh toán phải > 0' });
-        momoPaymentService.Payment(resData.message)
+        paymomo(resData.message)
             .then(data => {
                 return res.status(200).json({ message: data.payUrl });
             })
