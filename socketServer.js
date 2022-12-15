@@ -12,15 +12,15 @@ const SocketServer = (socket) => {
     })
 
     //Notification
-    // socket.on('createNotify', msg => {
-    //     const clients = users.filter(user => msg.usersId.includes(user.id))
-    //     if(clients.length > 0){
-    //         clients.forEach(client => {
-    //             delete msg.usersId;
-    //             socket.to(`${client.socketId}`).emit('createNotifyToClient', msg)
-    //         })
-    //     }
-    // })
+    socket.on('createNotify', msg => {
+        const clients = users.filter(user => msg.usersId.includes(user.id))
+        if(clients.length > 0){
+            clients.forEach(client => {
+                delete msg.usersId;
+                socket.to(`${client.socketId}`).emit('createNotifyToClient', msg)
+            })
+        }
+    })
 
     //Message
     socket.on('addMessage', msg => {
