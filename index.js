@@ -32,7 +32,7 @@ app.use(express.urlencoded({ extended: false }))
 app.use("/api", route)
 
 
-connectDB()
+
 
 
 
@@ -41,8 +41,9 @@ connectDB()
 // let server = app.listen(port, async () => {
 //   console.log(`Example app listening on port ${port}`)
 // })
-Sentry.captureMessage('error socket', 'error');
+Sentry.captureMessage('error', 'error');
 try {
+  connectDB();
   let io = require('socket.io')(server);
 
   io.on('connection', (socket) => {
