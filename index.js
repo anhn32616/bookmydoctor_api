@@ -11,7 +11,7 @@ const Sentry = require('./log');
 const port = 3000
 
 app.use(function (req, res, next) {
-  const allowedOrigins = ['http://localhost:3000', 'https://bookmydoctor.onrender.com', 'https://bookmydoctor-9g4m.onrender.com', 'https://bookmydoctor.netlify.app', 'https://test-payment.momo.vn'];
+  const allowedOrigins = ['http://localhost:3000', 'https://bookmydoctor.onrender.com', 'https://bookmydoctor-9g4m.onrender.com', 'https://bookmydoctor.netlify.app', 'https://test-payment.momo.vn', 'https://scintillating-semifreddo-52ce18.netlify.app'];
   const origin = req.headers.origin;
   if (allowedOrigins.includes(origin)) {
     res.setHeader('Access-Control-Allow-Origin', origin);
