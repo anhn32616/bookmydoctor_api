@@ -20,6 +20,7 @@
   "homepage": "https://github.com/anhn32616/bookmydoctor_api#readme",
   "dependencies": {
     "@elastic/elasticsearch": "^8.5.0",
+    "@sentry/node": "^4.4.0",
     "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",
     "chai": "^4.3.7",
@@ -37,6 +38,7 @@
     "mysql2": "^2.3.3",
     "nodemailer": "^6.8.0",
     "nodemon": "^2.0.20",
+    "pay-momo": "^1.0.0",
     "sequelize": "^6.23.2",
     "socket.io": "^4.5.3",
     "uuid": "^8.3.2"
