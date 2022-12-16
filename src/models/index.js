@@ -5,13 +5,14 @@ const path = require('path');
 const Sequelize = require('sequelize');
 const process = require('process');
 const basename = path.basename(__filename);
+require('dotenv').config();
 // const env = process.env.NODE_ENV || 'development';
 // const config = require(__dirname + '/../config/config.json')[env];
 const db = {};
 
 let sequelize;
-sequelize = new Sequelize('bookmydoctor', 'ijx1vrcbhcb2draxumy6', 'pscale_pw_reMLjc2OfEn8rGmGMXVcgsZgtsODq9nl07BwvcFrk7Z', {
-  host: 'us-east.connect.psdb.cloud',
+sequelize = new Sequelize(process.env.database, process.env.usernameDB, process.env.password, {
+  host: process.env.host,
   dialect: 'mysql',
   logging: false,
   timezone: "+07:00",
