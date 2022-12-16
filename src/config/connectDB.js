@@ -1,9 +1,10 @@
+require('dotenv').config();
 const { Sequelize } = require('sequelize');
 
 
 // Option 3: Passing parameters separately (other dialects)
-const sequelize = new Sequelize('bookmydoctor', 'ijx1vrcbhcb2draxumy6', 'pscale_pw_reMLjc2OfEn8rGmGMXVcgsZgtsODq9nl07BwvcFrk7Z', {
-  host: 'us-east.connect.psdb.cloud',
+const sequelize = new Sequelize(process.env.database, process.env.usernameDB, process.env.password, {
+  host: process.env.host,
   dialect: 'mysql',
   logging: false,
   timezone: "+07:00",
